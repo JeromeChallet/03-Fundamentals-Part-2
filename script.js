@@ -17,7 +17,6 @@ if (hasDriversLicence) console.log("I can drive");
 // it won't let us compile it will return an error
 const interface = "Audio";
 const privat = 534;
-*/
 
 //Functions
 //A function is a piece of code that we can reuse over and over again,
@@ -51,3 +50,38 @@ console.log(appleJuice);
 
 const appleOrangeJuice = fruitProcessor(2, 5);
 console.log(appleOrangeJuice);
+*/
+
+//Arrow Functions
+//the advantage of an arrow func is the return is done implicitly,
+//we dont have to write the word return
+//they also dont get a this keyword
+//It is good for one liner functions
+//here we assign the arrow function to the var calcAge3
+//which is also the name of the function in a way
+//parameter => what we want to return
+const calcAge3 = (birthYear) => 2024 - birthYear;
+const age3 = calcAge3(1986);
+
+//the return can be omited in an arrow function only if it's a one liner
+//that is not the case here
+// const yearsUntilRetirement = (birthYear) => {
+//   const age = 2024 - birthYear;
+//   const retirement = 65 - age;
+//   return retirement;
+// };
+
+//again, the var we assigned the arrow function to,
+//is kinda the name of the function and how we call the argument
+//yearsUntilRetirement(1991);
+
+//when we have several parameters, we wrap it with ()
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const age = 2024 - birthYear;
+  const retirement = 65 - age;
+  return `${firstName} retires in ${retirement} years`;
+};
+
+//we seperate arguments with ,
+console.log(yearsUntilRetirement(1986, "jerome"));
+console.log(yearsUntilRetirement(1956, "sam"));
