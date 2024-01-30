@@ -50,7 +50,7 @@ console.log(appleJuice);
 
 const appleOrangeJuice = fruitProcessor(2, 5);
 console.log(appleOrangeJuice);
-*/
+
 
 //Arrow Functions
 //the advantage of an arrow func is the return is done implicitly,
@@ -85,3 +85,29 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 //we seperate arguments with ,
 console.log(yearsUntilRetirement(1986, "jerome"));
 console.log(yearsUntilRetirement(1956, "sam"));
+*/
+
+//Reviewing Functions
+const calcAge = function (birthYear) {
+  return 2024 - birthYear;
+};
+
+//function expressions are functions that do not need a name if assigned to a var
+const yearsUntilRetirement = function (birthYear, firstName) {
+  //the var used to save the returned value is called the function output
+  const age = calcAge(birthYear);
+  const retirement = 65 - age;
+
+  //we say a function has returned because once it hits the return statement,
+  //the code is exiting the function, meant those console.log wont execute
+  if (retirement > 0) {
+    return retirement;
+    console.log(`${firstName} retires in ${retirement} years`);
+  } else {
+    return -1;
+    console.log(`${firstName} has already retired 🎉`);
+  }
+};
+
+console.log(yearsUntilRetirement(1986, "jerome"));
+console.log(yearsUntilRetirement(1970, "max"));
