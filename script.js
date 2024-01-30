@@ -87,6 +87,7 @@ console.log(yearsUntilRetirement(1986, "jerome"));
 console.log(yearsUntilRetirement(1956, "sam"));
 */
 
+/*
 //Introduction to arrays
 //an array is like a big container in which we throw var that we can later change
 //use [] to create an array
@@ -138,3 +139,4 @@ const ages = [
   calAge(years[years.length - 1]),
 ];
 console.log(ages);
+*/
