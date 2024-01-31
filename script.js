@@ -167,3 +167,48 @@ const ages = [
 ];
 console.log(ages);
 */
+
+//Basic array operations
+const friends = ["john", "max", "sam"];
+console.log(friends);
+//add at the end of the array
+//by assiging to a var "newLenght" we can retrieve the length of the array
+const newLength = friends.push("jay");
+console.log(friends); // will have jay at the end
+console.log(newLength); // display 4
+
+//adds at the beginning of the array
+friends.unshift("jack");
+console.log(friends);
+
+//remove the last element of the Array
+friends.pop();
+//return the pooped element
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+//remove element at the beginning of the array
+friends.shift();
+console.log(friends);
+
+//tells at which position in the array the element is
+//the value returned is 0 based
+console.log(friends.indexOf("max"));
+//if we do it for an element that is not there we get -1
+console.log(friends.indexOf("bob"));
+
+//returns true is the element is in the array and false if not
+console.log(friends.includes("max")); // true
+console.log(friends.includes("bob")); // false
+//.includes works with strictmode
+friends.push(23);
+console.log(friends.includes(23)); // true
+console.log(friends.includes("23")); // false
+
+//the most use case of the include method is for if else
+if (friends.includes("max")) {
+	console.log("you have a friend called max");
+} else {
+	console.log("you don't have a friend called max");
+}
