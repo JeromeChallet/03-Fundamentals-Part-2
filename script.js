@@ -168,6 +168,7 @@ const ages = [
 console.log(ages);
 */
 
+/*
 //Basic array operations
 const friends = ["john", "max", "sam"];
 console.log(friends);
@@ -212,3 +213,25 @@ if (friends.includes("max")) {
 } else {
 	console.log("you don't have a friend called max");
 }
+*/
+
+//Introduction to Objects
+//Unlike arrays, elements in an object can be assigned name, key-value pairs
+const jeromeArray = [
+	"jerome",
+	"challet",
+	2024 - 1986,
+	"engineer",
+	["michale", "peter", "steven"],
+];
+
+//each is also called a property
+//creating an object this way is called the object literal syntax
+//In objects, the order of the values do not matter when we retrieve them
+const jeromeObject = {
+	firstName: "jerome",
+	lastName: "challet",
+	birthYear: 2024 - 1986,
+	job: "engineer",
+	friends: ["michale", "peter", "steven"],
+};
