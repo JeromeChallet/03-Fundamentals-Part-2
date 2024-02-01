@@ -215,6 +215,7 @@ if (friends.includes("max")) {
 }
 */
 
+/*
 //Introduction to Objects
 //Unlike arrays, elements in an object can be assigned name, key-value pairs
 const jeromeArray = [
@@ -235,3 +236,20 @@ const jeromeObject = {
 	job: "engineer",
 	friends: ["michale", "peter", "steven"],
 };
+*/
+
+//Dot vs Bracket Notation
+const jeromeObject = {
+	firstName: "jerome",
+	lastName: "challet",
+	birthYear: 2024 - 1986,
+	job: "engineer",
+	friends: ["michale", "peter", "steven"],
+};
+console.log(jerome);
+
+//the first way to retrieve a property from an object is with the dot notation
+console.log(jeromeObject.lastName);
+//the second way is with the bracket notation
+//remember to use "" inside the []
+console.log(jeromeObject["lastName"]);
