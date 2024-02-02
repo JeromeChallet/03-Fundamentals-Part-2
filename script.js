@@ -239,17 +239,56 @@ const jeromeObject = {
 */
 
 //Dot vs Bracket Notation
+//also known as Member Access and Computed Member Access
+//we use the bracket notation when we first need to compute the property name, to access properties dynamically
+//i allows us to access properties dynamically or when the property is not a valid identifier
+//we use the dot notation when we want it to be simpler but we cannot use expressions
+//we use it when the property name is known and is a valid identifier
 const jeromeObject = {
 	firstName: "jerome",
 	lastName: "challet",
 	birthYear: 2024 - 1986,
 	job: "engineer",
-	friends: ["michale", "peter", "steven"],
+	friends: ["michael", "peter", "steven"],
 };
-console.log(jerome);
+console.log(jeromeObject);
 
 //the first way to retrieve a property from an object is with the dot notation
 console.log(jeromeObject.lastName);
 //the second way is with the bracket notation
 //remember to use "" inside the []
 console.log(jeromeObject["lastName"]);
+//in the brackets we can put any expression/operation, something that produces a value
+//"Name" is the repeating part of the properties up in jeromeObject (firstName, lastName)
+const nameKey = "Name";
+console.log(jeromeObject["first" + nameKey]);
+console.log(jeromeObject["last" + nameKey]);
+//that would not work cause in dot notation we need to use the real property name
+//console.log(jerome."last" + nameKey)
+
+//prompts need to be stored into variables in order to be used
+const interestedIn = prompt(
+	"what do you want to know about jerome? firstName, lastName, age, job, friends"
+);
+//undefined is what we get when we try to access a property on an object that does not exist
+//in this case, jeromeObject does not have a property called interestedIn
+console.log(jeromeObject.interestedIn); // will be undefined
+console.log(jeromeObject[interestedIn]); // will be the right answer
+
+//if the value exists, it will display
+if (jeromeObject[interestedIn]) {
+	console.log(jeromeObject[interestedIn]);
+} else {
+	console.log("you did not write: firstName, lastName, age, job, friends");
+}
+
+//althoug declared later, these properties are added to the object
+jeromeObject.location = "Japan";
+jeromeObject["twitter"] = "@jeromechallet";
+console.log(jeromeObject);
+
+//challenge
+// "jerome has 3 friends, and his best friend is called michael"
+console.log(
+	`${jeromeObject.firstName} has ${jeromeObject.friends.length} friends, and his best friend is called ${jeromeObject.friends[0]}`
+);
