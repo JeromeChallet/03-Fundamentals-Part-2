@@ -300,27 +300,63 @@ console.log(
 //meaning we can create a new key value pair in which the value is just a function
 //Therefore we can add functions to objects
 const jeromeObject = {
-	firstName: "jerome",
-	lastName: "challet",
-	birthYear: 1986,
-	job: "engineer",
-	friends: ["michael", "peter", "steven"],
-	hasDriversLicense: true,
+  firstName: "jerome",
+  lastName: "challet",
+  birthYear: 1986,
+  job: "engineer",
+  friends: ["michael", "peter", "steven"],
+  hasDriversLicense: true,
 
-	//this is an object method
-	//an object method is a property that holds a function value
-	//Any function that is attached to an object is called a method
-	//it must be an expression
-	calcAge: function (birthYear) {
-		return 2024 - birthYear;
-	},
-	//a declaration would not work though
-	//will give error syntax
-	// function(birthYear) {
-	// 	return 2024 - birthYear;
-	// },
+  //this is an object method
+  //an object method is a property that holds a function value
+  //Any function that is attached to an object is called a method
+  //it must be an expression
+  // calcAge: function (birthYear) {
+  //   return 2024 - birthYear;
+  // },
+  //a declaration would not work though
+  //will give error syntax
+  // function(birthYear) {
+  // 	return 2024 - birthYear;
+  // },
+
+  //"this" allows us to read directly from the function itself
+  //without having to pas it in as a parameter
+  //"this" is basically equal to the object on which the method is called
+  //"this" is equal to the object calling the method
+  //"this" refers to the parent in this case jeromeObject
+  //using "this" is DRY
+  // calcAge: function () {
+  //   console.log(this); // the whole jeromeObject
+  //   return 2024 - this.birthYear;
+  // },
+
+  //we can use "this" to store a new property
+  //here we create age to store the current age
+  //so we don't have to calculate it again thus keeping it DRY
+  calcAge: function () {
+    this.age = 2024 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()} ${this.job} and he has ${
+      this.hasDriversLicense ? "a" : "no"
+    } drivers license
+    }`;
+  },
 };
 
 //both return the same
-console.log(jeromeObject.calcAge(1986));
-console.log(jeromeObject["calcAge"](1986));
+//for the first object method that do not use this
+// console.log(jeromeObject.calcAge(1986));
+// console.log(jeromeObject["calcAge"](1986));
+//for the object method that uses this
+console.log(jeromeObject.calcAge());
+//calls the the method object which also use "this"
+console.log(jeromeObject.age);
+console.log(jeromeObject.age);
+console.log(jeromeObject.age);
+
+//dont foget the () when calling an object method
+console.log(jeromeObject.getSummary());
