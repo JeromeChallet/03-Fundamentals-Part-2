@@ -208,7 +208,7 @@ console.log(friends.includes("23")); // false
 
 //the most use case of the include method is for if else
 if (friends.includes("max")) {
-	console.log("you have a friend called max");
+  console.log("you have a friend called max");
 } else {
-	console.log("you don't have a friend called max");
+  console.log("you don't have a friend called max");
 }
