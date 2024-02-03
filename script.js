@@ -336,6 +336,7 @@ const jeromeObject = {
   //so we don't have to calculate it again thus keeping it DRY
   calcAge: function () {
     this.age = 2024 - this.birthYear;
+    //remember to use "this"to return the newly created parameter
     return this.age;
   },
 
