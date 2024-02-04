@@ -437,6 +437,7 @@ for (let i; i < jeromeObject.length; i++) {
 
 /////////////////////////////////////////////////////////////////////////////////////
 
+/*
 //48.Looping Backwards And Loops In Loops
 const jeromeObject = [
   "jerome",
@@ -458,4 +459,31 @@ for (let exercise = 1; exercise <= 3; exercise++) {
   for (let rep = 1; rep <= 5; rep++) {
     console.log(`Lifting weight repetition ${rep}💪`);
   }
+}
+*/
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+/**/
+//While Loop
+//the while loop does not have to depend on any counter variable
+//meaning if you need a loop without a counter you use the while loop
+//also means if you do not know how many iterations will have you use a while loop
+//the ref value must be declared beforehand outside
+let rep = 1;
+while (rep <= 10) {
+  console.log(`WHILE: Lifting weight repetition ${rep}💪`);
+}
+
+//the big difference with a for loop is that here you can use any kind of condition
+//keep rolling the die until you get a 6
+let dice = Math.trunc(Math.random() * 6 + 1); //random nb generator
+console.log(dice);
+
+//if the first roll is a 6 then there will be 0 iterations and the console.log wont display anything
+while (dice !== 6) {
+  console.log(`u rolled a ${dice}`);
+  //the value random value must be reassigned at every iteration
+  dice = Math.trunc(Math.random() * 6 + 1);
+  if (dice === 6) console.log("loop is about to end...");
 }
