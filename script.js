@@ -295,6 +295,7 @@ console.log(
 );
 */
 
+/*
 //Object Methods
 //functions are really just another type of value
 //meaning we can create a new key value pair in which the value is just a function
@@ -331,6 +332,7 @@ const jeromeObject = {
   //   return 2024 - this.birthYear;
   // },
 
+
   //we can use "this" to store a new property
   //here we create age to store the current age
   //so we don't have to calculate it again thus keeping it DRY
@@ -361,3 +363,10 @@ console.log(jeromeObject.age);
 
 //dont foget the () when calling an object method
 console.log(jeromeObject.getSummary());
+*/
+
+//Iteration the forloop
+//if else statements and loops are called controlled structure
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`rep: ${rep}`);
+}
