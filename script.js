@@ -373,6 +373,7 @@ for (let rep = 1; rep <= 10; rep++) {
 }
 */
 
+/*
 //Looping, Arrays, Breaking, Continuing
 const jeromeObject = {
   firstName: "jerome",
@@ -417,3 +418,4 @@ for (let i; i < jeromeObject.length; i++) {
   if (typeof jeromeObject[i] === "number") break;
   console.log(jeromeObject[i], typeof jeromeObject[i]);
 }
+*/
