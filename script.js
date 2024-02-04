@@ -419,3 +419,5 @@ for (let i; i < jeromeObject.length; i++) {
   console.log(jeromeObject[i], typeof jeromeObject[i]);
 }
 */
+
+//48.Looping Backwards And Loops In Loops
