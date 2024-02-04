@@ -365,8 +365,55 @@ console.log(jeromeObject.age);
 console.log(jeromeObject.getSummary());
 */
 
+/*
 //Iteration the forloop
 //if else statements and loops are called controlled structure
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`rep: ${rep}`);
+}
+*/
+
+//Looping, Arrays, Breaking, Continuing
+const jeromeObject = {
+  firstName: "jerome",
+  lastName: "challet",
+  birthYear: 1986,
+  job: "engineer",
+  friends: ["michael", "peter", "steven"],
+};
+
+const types = [];
+
+//looping an object and arrays
+for (let i; i < jeromeObject.length; i++) {
+  console.log(jeromeObject[i], typeof jeromeObject[i]);
+
+  //assigns the types of the obj to another one
+  //types[i] = typeof jeromeObject[i];
+  //very important to add elements at the end of the array thus .push
+  types.push(typeof jeromeObject[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2070];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2024 - years[i]);
+}
+
+console.log(ages);
+
+//continue will keep skip through the loop and break will end it
+console.log("--- ONLY STRINGS ---");
+for (let i; i < jeromeObject.length; i++) {
+  if (typeof jeromeObject[i] !== "string") continue;
+  console.log(jeromeObject[i], typeof jeromeObject[i]);
+}
+
+console.log("--- BREAK WITH NUMBER ---");
+for (let i; i < jeromeObject.length; i++) {
+  if (typeof jeromeObject[i] === "number") break;
+  console.log(jeromeObject[i], typeof jeromeObject[i]);
 }
