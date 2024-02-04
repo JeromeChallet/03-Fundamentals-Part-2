@@ -17,7 +17,7 @@ if (hasDriversLicence) console.log("I can drive");
 // it won't let us compile it will return an error
 const interface = "Audio";
 const privat = 534;
-
+/////////////////////////////////////////////////////////////////////////////////////
 //Functions
 //A function is a piece of code that we can reuse over and over again,
 //and does one thing... it has a function to fullfill
@@ -51,6 +51,7 @@ console.log(appleJuice);
 const appleOrangeJuice = fruitProcessor(2, 5);
 console.log(appleOrangeJuice);
 
+/////////////////////////////////////////////////////////////////////////////////////
 
 //Arrow Functions
 //the advantage of an arrow func is the return is done implicitly,
@@ -87,6 +88,8 @@ console.log(yearsUntilRetirement(1986, "jerome"));
 console.log(yearsUntilRetirement(1956, "sam"));
 */
 
+/////////////////////////////////////////////////////////////////////////////////////
+
 /*
 //Reviewing Functions
 const calcAge = function (birthYear) {
@@ -113,6 +116,8 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 console.log(yearsUntilRetirement(1986, "jerome"));
 console.log(yearsUntilRetirement(1970, "max"));
 */
+
+/////////////////////////////////////////////////////////////////////////////////////
 
 /*
 //Introduction to arrays
@@ -168,6 +173,8 @@ const ages = [
 console.log(ages);
 */
 
+/////////////////////////////////////////////////////////////////////////////////////
+
 /*
 //Basic array operations
 const friends = ["john", "max", "sam"];
@@ -215,6 +222,8 @@ if (friends.includes("max")) {
 }
 */
 
+/////////////////////////////////////////////////////////////////////////////////////
+
 /*
 //Introduction to Objects
 //Unlike arrays, elements in an object can be assigned name, key-value pairs
@@ -237,6 +246,8 @@ const jeromeObject = {
 	friends: ["michale", "peter", "steven"],
 };
 */
+
+/////////////////////////////////////////////////////////////////////////////////////
 
 /*
 //Dot vs Bracket Notation
@@ -365,6 +376,8 @@ console.log(jeromeObject.age);
 console.log(jeromeObject.getSummary());
 */
 
+/////////////////////////////////////////////////////////////////////////////////////
+
 /*
 //Iteration the forloop
 //if else statements and loops are called controlled structure
@@ -373,15 +386,17 @@ for (let rep = 1; rep <= 10; rep++) {
 }
 */
 
+/////////////////////////////////////////////////////////////////////////////////////
+
 /*
 //Looping, Arrays, Breaking, Continuing
-const jeromeObject = {
-  firstName: "jerome",
-  lastName: "challet",
-  birthYear: 1986,
-  job: "engineer",
-  friends: ["michael", "peter", "steven"],
-};
+const jeromeObject = [
+  "jerome",
+  "challet",
+  1986,
+ "engineer",
+  ["michael", "peter", "steven"],
+];
 
 const types = [];
 
@@ -419,3 +434,28 @@ for (let i; i < jeromeObject.length; i++) {
   console.log(jeromeObject[i], typeof jeromeObject[i]);
 }
 */
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+//48.Looping Backwards And Loops In Loops
+const jeromeObject = [
+  "jerome",
+  "challet",
+  1986,
+  "engineer",
+  ["michael", "peter", "steven"],
+];
+
+for (let i = jeromeObject.length - 1; i >= 0; i--) {
+  console.log(i, jeromeObject[i]);
+}
+
+//nested for loop
+// i <= 5 is the same as i<6
+for (let exercise = 1; exercise <= 3; exercise++) {
+  console.log(`--------- Starting Exercise --------- exercise ${exercise}`);
+
+  for (let rep = 1; rep <= 5; rep++) {
+    console.log(`Lifting weight repetition ${rep}💪`);
+  }
+}
