@@ -6,3 +6,4 @@ parameters
 arguments
 arrow function
 function expression
+returned value
