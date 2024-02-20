@@ -60,7 +60,7 @@ console.log(appleOrangeJuice);
 //It is good for one liner functions
 //here we assign the arrow function to the var calcAge3
 //which is also the name of the function in a way
-//parameter => what we want to return
+//type funcName = parameter => what we want to return
 const calcAge3 = (birthYear) => 2024 - birthYear;
 const age3 = calcAge3(1986);
 
