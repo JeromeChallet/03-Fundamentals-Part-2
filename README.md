@@ -1,9 +1,9 @@
 readme
 
-"use strict"
-running, calling, invoquing the function
-parameters
-arguments
-arrow function
-function expression
-returned value
+"use strict"\
+running, calling, invoquing the function\
+parameters\
+arguments\
+arrow function\
+function expression\
+returned value\
