@@ -13,3 +13,7 @@ type arrayName = [];\
 type arrayName = new Array(paramters);\
 array.length-1\
 primitive values are immutable, arrays aren't\
+array.push()\
+array.pop()\
+array.shift()\
+array.unshift()\
