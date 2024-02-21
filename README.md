@@ -20,3 +20,4 @@ array.shift()\
 array.unshift()
 array.indexOf(arrEL) // 0 BASED\
 array.include(arrEl)\
+type objName = {key: value};\
