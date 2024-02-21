@@ -10,11 +10,13 @@ function expression\
 type funcName = function (parameters) {}\
 returned value\
 type arrayName = [];\
-type arrayName = new Array(paramters);\
+type arrayName = new Array(paramters)\
+array.length // 1 based\
 array.length-1\
 primitive values are immutable, arrays aren't\
 array.push()\
 array.pop()\
 array.shift()\
 array.unshift()
-array.indexof
+array.indexOf(arrEL) // 0 BASED\
+array.include(arrEl)\
